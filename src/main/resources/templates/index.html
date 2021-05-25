@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
-    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Space</title>
 </head>
 <body>
-    <p> Meu Projeto </p>
-    <a th:href="@{/produtos/cadastrar}"> Cadastrar Produtos </a>
-    <br />
-    <a th:href="@{/produtos}"> Listar Produtos </a>
+
+<div class="banner">
+
+</div>
+
+<div class="content">
+    <h1>Products Station</h1>
+    <p>Wellcome back, CosmicSpace Developer! What you gonna do ?</p>
+
+    <div>
+        <button type="button"><span></span><a th:href="@{/produtos/cadastrar}">Register Products </a></button>
+
+        <button type="button"><span></span><a th:href="@{/produtos}"> List Products </a></button>
+    </div>
+
+</div>
+
+
 </body>
 </html>
