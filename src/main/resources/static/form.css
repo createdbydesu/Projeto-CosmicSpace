@@ -1,0 +1,160 @@
+/* DEFAULT */
+
+*{
+	margin:0px;	
+	font-family: Century gothic, Verdana;
+}
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(galaxybg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.content{
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  
+}
+
+.content h2{
+  padding: 50px ;
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+
+
+/* FORM INPUT */
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 35%;
+  color: white;
+  border: 0;
+  border-bottom: 2px solid white;
+  background: transparent;
+  font-size: 25px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+input[type=text]:focus{
+
+  transition: ease-in 0.4s;
+  box-shadow: 0px 18px 20px -18px#bdbdbd;
+
+}
+
+
+input::placeholder{
+  color: white;
+  transition: 2s;
+  text-align: center;
+  cursor: text;
+  
+}
+
+
+
+/* BUTTONS */ 
+
+input[type=button], input[type=submit], input[type=reset] {
+  margin: 20px 10px;
+  padding: 15px 0;
+  width: 200px;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  
+  transform: scale(1.3);
+  transition: 0.4s;
+  margin: 0 25px;
+  
+}
+
+
+@media only screen and (max-width: 680px) {
+
+  .content h2{
+    padding: 20px ;
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    width: 70%;
+    color: white;
+    border: 0;
+    border-bottom: 2px solid white;
+    background: transparent;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+  }
+
+  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  
+    transition: 0.4s;
+    margin: 0 25px;
+    
+  }
+
+}
+
+@media only screen and (max-width: 1080px) {
+
+  .content h2{
+    padding: 20px ;
+    font-size: 100px;
+    margin-top: 60px;
+  }
+
+  input[type=text] {
+    padding: 12px 20px;
+    margin: 20px 0;
+    width: 70%;
+    color: white;
+    border: 0;
+    border-bottom: 2px solid white;
+    background: transparent;
+    font-size: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+    font-size: 22px;
+  }
+
+  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    
+    transform: scale(1.3);
+    transition: 0.4s;
+    margin: 0 25px;
+    
+  }
+
+}

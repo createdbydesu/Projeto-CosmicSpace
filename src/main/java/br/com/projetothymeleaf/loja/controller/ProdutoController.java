@@ -81,7 +81,20 @@ public class ProdutoController {
     @GetMapping("/deletar/{id}")
     public String deletarProduto(@PathVariable("id") Long id){
         this.produtoService.deletar(id);
+
         return "redirect:/produtos";
+
+
     }
+
+
+
+
+
+
+
+
+
+
 
 }
