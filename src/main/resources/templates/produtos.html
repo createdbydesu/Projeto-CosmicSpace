@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/produtos.css}">
+
 <head>
     <meta charset="UTF-8">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Products Register</title>
+    <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
-<center>
-    <h2> Listagem de produtos </h2>
-</center>
-<div class="content">
-    <table th:if="${not #lists.isEmpty(produtoList)}" id="customers">
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Valor</th>
-            <th>Ação</th>
-        </tr>
-        <tr th:each="produto : ${produtoList}">
-            <td th:text="${produto.id}"> Alfreds Futterkiste </td>
-            <td th:text="${produto.nome}"> Maria Anders </td>
-            <td th:text="${produto.valor}"> Germany </td>
 
-            <td>
-                <a th:href="@{produtos/atualizar/{id}(id=${produto.id})}">Atualizar</a>
-                <br />
-                <a th:href="@{produtos/deletar/{id}(id=${produto.id})}">Deletar</a>
-            </td>
 
-        </tr>
-    </table>
 
-    <span th:if="${#lists.isEmpty(produtoList)}"> Não existe nenhum produto cadastrado </span>
+<div class="banner">
 
+    <div class="content">
+        <h2> Cosmic Products </h2>
+
+        <table th:if="${not #lists.isEmpty(produtoList)}" id="customers">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Ação</th>
+            </tr>
+            <tr th:each="produto : ${produtoList}">
+                <td th:text="${produto.id}"> Alfreds Futterkiste </td>
+                <td th:text="${produto.nome}"> Maria Anders </td>
+                <td th:text="${produto.valor}"> Germany </td>
+
+
+                <td>
+                    <a class="btn-update" th:href="@{produtos/atualizar/{id}(id=${produto.id})}">Atualizar</a>
+
+                    <a class="btn-delete" th:href="@{produtos/deletar/{id}(id=${produto.id})}">Deletar</a> <!--colocar o th no href-->
+                </td>
+
+            </tr>
+
+
+        </table>
+
+        <span th:if="${#lists.isEmpty(produtoList)}"> Não existe nenhum produto cadastrado </span>
+
+        <a class="btn-register" th:href="@{produtos/cadastrar}">New Register</a>
+
+    </div>
 </div>
 </body>
 </html>
+
+
+
+
+
